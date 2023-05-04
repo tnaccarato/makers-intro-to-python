@@ -45,6 +45,25 @@ print(f"2 + 3 = {added} (should be 5)")
 multiplied = 2 * 3
 print(f"2 * 3 = {multiplied} (should be 6)")
 
+# Subtraction
+subtracted = 3-2
+print(f"3 - 2 = {subtracted} (should be 1)")
+
+# Division
+divided = 4 / 2
+print(f"4 / 2 = {divided} (should be 2.0)")
+
+# Modulus
+modulus = 4 % 3
+print (f"4 % 3 = {modulus} (should be 1)")
+
+# Exponentiation
+exponent = 2 ** 2
+print(f"2 ** 2 = {exponent} (should be 4)")
+
+# Floor Division
+floor = 8 // 3
+print(f"8 // 3 = {floor} (should be 2)")
 # @TASK: For each section below:
 #
 # 1. Uncomment the code by removing the `# `
