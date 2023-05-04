@@ -57,7 +57,13 @@ def print_board(board):
   return grid
 
 def make_move(board, row, column, player):
-  board[row][column] = player
+  if board[row][column] == ".":
+    board[row][column] = player
+  else:
+    print("You can't make that move! Try again!")
+    row = int(input("Enter a row: "))
+    column = int(input("Enter a column: "))
+    make_move(board, row, column, player)
   return board
 
 
