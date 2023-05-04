@@ -104,15 +104,18 @@ groups_to_check = [
 ]
 
 def is_game_over(board):
-  # We go through our groups
-  for group in groups_to_check:
-    # If any of them are empty, they're clearly not a
-    # winning row, so we skip them.
-    if is_group_complete(board, group[0], group[1], group[2]):
-      if are_all_cells_the_same(board, group[0], group[1], group[2]):
-        return True # We found a winning row!
-        # Note that return also stops the function
-  return False # If we get here, we didn't find a winning row
+    # Check for a winning row
+    for group in groups_to_check:
+        if is_group_complete(board, group[0], group[1], group[2]) and are_all_cells_the_same(board, group[0], group[1], group[2]):
+            print("Player", board[group[0][0]][group[0][1]], "wins!")
+            return True
+
+    # Check for a draw
+    if all([cell != "." for row in board for cell in row]):
+        print("It's a draw!")
+        return True
+
+    return False
 
 # And test it out:
 
